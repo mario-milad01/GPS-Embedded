@@ -1,7 +1,7 @@
 #include "Decision_Maker.h"
 #include "math.h"
 #include <stdlib.h>
-
+//calc_distance
  float rad_convert(float coordinate)
 {
     int  coordinate_D;
