@@ -23,6 +23,7 @@ void nearest_hall(void)
             min_index = c;
         }
     }
+// nearst hall.
     Lcd_display(((char)min_index));
 }
 	struct my_fixed_halls myHalls;
