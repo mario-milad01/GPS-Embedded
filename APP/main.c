@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "GPS.h"
 #include "Global.h"
-	
+//Main app code.
 void nearest_hall(void)
 {
     int   min_index = 0;
