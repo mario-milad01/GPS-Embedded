@@ -34,13 +34,13 @@ static void lcd_pulse_en(void)
 
 static void lcd_cmd(uint8_t cmd)
 {
-    Printdata(cmd);
+    Printdata(cmd);  //pass the 8-bits data to the datalines of lcd
     GPIOD->DATA &= ~(1U << 1);   
     GPIOD->DATA &= ~(1U << 0);   
     lcd_pulse_en();
 }
 
-static void lcd_data(uint8_t data)
+static void lcd_data(uint8_t data)  //PASSING INSTRUCTIONS FOR LCD
 {
     Printdata(data);
     GPIOD->DATA &= ~(1U << 1);   
@@ -56,7 +56,7 @@ static void lcd_string(const char *str, uint8_t len)
     }
 }
 
-static void lcd_init(void)
+static void lcd_init(void)  //BASIC INSTRUCTION SETS FOR INITIALLIZING THE LCD
 {
     lcd_cmd(0x38U);  
     lcd_cmd(0x06U);  
