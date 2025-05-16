@@ -17,6 +17,8 @@ void UART4_Init(void){
   GPIO_PORTC_PCTL_R = (GPIO_PORTC_PCTL_R & 0xFF00FFFF) | 0x00220000; 
   GPIO_PORTC_AMSEL_R &= ~0x30;        
 }
+
+// send Char
 void UART4_Send(char data)
 {
     while (UART4_FR_R & UART_FR_TXFF) ;       
